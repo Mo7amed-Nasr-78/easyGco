@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Dropshipping</title>
+    <link rel="icon" href="/assets/fav.png">
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- stylesheet links -->
+    <link rel="stylesheet" href="/style/custom.css">
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+<body>
+
+    <!-- header start -->
+    <header class="position-fixed mx-auto top-0 start-0 end-0 z-100 transition-03 py-3">
+        <div class="container w-100 px-sm-0 d-flex align-items-center justify-content-between position-relative">
+            <div class="logo height-45">
+                <a href="#how">
+                    <img src="/assets/logo.svg" alt="logo" class="h-100 w-100">
+                </a>
+            </div>
+            <div class="d-none d-lg-flex align-items-center justify-content-between gap-5">
+                <div class="d-flex align-items-center justify-content-between gap-4 gap-xl-5">
+                    <div class="dropdown d-flex align-items-center">
+                        <button class="link border-0 p-0 bg-transparent text-capitalize fs-18 fw-normal secondary-color transition-03" 
+                            type="button" id="stores_list" data-bs-toggle="dropdown" aria-expanded="false">
+                            solution
+                            <i class="fa-solid fa-chevron-down fs-16"></i>
+                        </button>
+                        <ul class="dropdown-menu p-0 rounded-3 overflow-hidden transition-03" aria-labelledby="solutions_menu">
+                            <li>
+                                <a href="#" class="dropdown-item height-45 d-flex align-items-center fs-18 text-capitalize transition-05 ps-2 py-0">option 1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item height-45 d-flex align-items-center fs-18 text-capitalize transition-05 ps-2 py-0">option 2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item height-45 d-flex align-items-center fs-18 text-capitalize transition-05 ps-2 py-0">option 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="../discover" class="link fs-18 fw-normal secondary-color text-capitalize text-decoration-none transition-03">pricing</a>
+                    <a href="../help" class="link fs-18 fw-normal secondary-color text-capitalize text-decoration-none transition-03">help center</a>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between gap-4">
+                    <button class="btn-1 height-45 px-30 border-2 border-solid border-accent rounded-pill bg-transparent secondary-color text-capitalize fs-20 fw-normal transition-03">sign in</button>
+                    <button class="btn-2 height-45 px-30 border-2 border-solid border-accent rounded-pill accent-bg-2 text-white text-capitalize fs-20 fw-normal transition-03">get started</button>
+                </div>
+            </div>
+            <div class="d-lg-none d-block">
+                <button class="header-icon width-40 height-40 d-flex d-lg-none align-items-center justify-content-center accent-bg rounded-circle text-white border-0" 
+                    role="button">
+                    <i class="fa-solid fa-bars bars fs-20"></i>
+                </button>
+            </div>
+        </div>
+        <div class="sidebar position-absolute top-0 bg-white p-3 transition-03">
+            <div class="d-flex align-items-start justify-content-between mb-3">
+                <div class="height-40">
+                    <a href="#how">
+                        <img src="/assets/logo.svg" alt="logo" class="h-100">
+                    </a>
+                </div>
+                <button class="sidebar-icon width-35 height-35 d-flex d-lg-none align-items-center justify-content-center accent-bg rounded-circle text-white border-0" 
+                    role="button">
+                    <i class="fa-solid fa-x x fs-16"></i>
+                </button>
+            </div>
+            <ul class="nav d-flex flex-column mb-3 gap-1">
+                <li class="nav-item fs-18 text-capitalize transition-05">
+                    <button class="nav-link min-height-45 border-0 h-100 w-100 d-flex align-items-center justify-content-between fs-18 fw-normal text-capitalize secondary-color bg-transparent transition-05 ps-0 pe-2"
+                    role="button" data-bs-toggle="collapse" href="#solutionMenu" aria-expanded="false" aria-controls="solutionMenu">
+                        solution
+                        <i class="fa-solid fa-angle-down fs-18"></i>
+                    </button>
+                    <div class="collapse" id="solutionMenu">
+                        <ul class="nav d-flex flex-column gap-1">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link height-45 d-flex align-items-center fs-16 fw-normal text-capitalize transition-05 secondary-color ps-2">option 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link height-45 d-flex align-items-center fs-16 fw-normal text-capitalize transition-05 secondary-color ps-2">option 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link height-45 d-flex align-items-center fs-16 fw-normal text-capitalize transition-05 secondary-color ps-2">option 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item height-45 fs-18 fw-normal text-capitalize">
+                    <a href="#" class="nav-link w-100 h-100 d-flex align-items-center secondary-color p-0 transition-03">pricing</a>
+                </li>
+                <li class="nav-item height-45 fs-18 fw-normal text-capitalize">
+                    <a href="#" class="nav-link w-100 h-100 d-flex align-items-center secondary-color p-0 transition-05">help center</a>
+                </li>
+            </ul>
+            <div class="w-100 d-flex flex-column gap-2">
+                <button class="btn-1 height-45 px-4 border-2 border-solid border-accent rounded-pill bg-transparent secondary-color text-capitalize fs-18 fw-normal transition-03">sign in</button>
+                <button class="btn-2 height-45 px-4 border-2 border-solid border-accent rounded-pill accent-bg-2 text-white text-capitalize fs-18 fw-normal transition-03">get started</button>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- focal section start -->
+    <section class="how section-bg" id="how">
+        <div class="container d-flex align-items-center px-sm-0 mx-auto min-h-screen-85 mb-5 py-5 py-lg-0 overflow-hidden">
+            <div class="row align-items-center justify-content-between mt-5 gap-5 gap-lg-0">
+                <div class="col-lg-6">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="how-maintitle fs-55 fw-medium text-capitalize black-color mb-3 mt-3 mt-lg-0">Product Sourcing</h3>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="how-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Integration with Suppliers</h4>
+                                    <p class="how-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans pe-3">EasyGCO integrates with various dropshipping suppliers, allowing you to source products easily without holding inventory.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="how-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Automated Order Fulfillment</h4>
+                                    <p class="how-desc w-90 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Orders are automatically forwarded to the supplier, who then ships the product directly to your customer.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="w-100">
+                        <img src="/assets/product-sourcing.svg" alt="image" class="w-100 h-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- focal section end -->
+
+    <!-- how start -->
+    <section class="overflow-hidden">
+        <div class="container px-sm-0 px-lg-2 px-xl-5 mb-5">
+
+            <div class="row w-100 mx-auto align-items-center py-4 py-sm-5 gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0 px-lg-2">
+                    <img src="/assets/catalog-management.svg" alt="image" class="w-100">
+                </div>
+                <div class="col-lg-6 px-0 px-lg-5">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="how-title fs-40 fw-medium text-capitalize black-color mb-4">Catalog Management</h3>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="how-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Wide Product Range</h4>
+                                    <p class="how-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">You can offer a wide range of products without the need to stock them physically.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="how-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Product Import Tools</h4>
+                                    <p class="how-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">EasyGCO provides tools to import products from suppliers into your online store seamlessly.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto align-items-center mt-5 py-4 py-sm-5 flex-column-reverse flex-lg-row gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0 px-lg-2">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="how-title fs-40 fw-medium text-capitalize black-color mb-4">Inventory Management</h3>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="how-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Real-Time Updates</h4>
+                                    <p class="how-desc w-85 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Inventory levels are updated in real-time, ensuring you don't sell out-of-stock items.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="how-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Supplier Sync</h4>
+                                    <p class="how-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Automatically sync your store with your suppliers to keep inventory levels accurate.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-0 ps-lg-4">
+                    <img src="/assets/inventory-management.svg" alt="image" class="how-img d-block ms-auto w-90">
+                </div>
+            </div> 
+
+            <div class="row w-100 mx-auto align-items-center mt-5 py-4 py-sm-5 gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0 px-lg-2">
+                    <img src="/assets/customizable-product.svg" alt="image" class="how-img w-90">
+                </div>
+                <div class="col-lg-6 px-0 ps-lg-5">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="how-title w-90 fs-40 fw-medium text-capitalize black-color mb-4">Customizable Product Listings</h3>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="how-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Product Descriptions</h4>
+                                    <p class="how-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Customize product titles, descriptions, and images to fit your store’s branding.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="how-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Pricing</h4>
+                                    <p class="how-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Set your own pricing strategies, including markups, discounts, and sales.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto align-items-center mt-5 py-4 py-sm-5 flex-column-reverse flex-lg-row gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0 pe-lg-5">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="how-title fs-40 fw-medium text-capitalize black-color mb-4">order Management</h3>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="how-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Order Tracking</h4>
+                                    <p class="how-desc fs-20 fw-medium grey-color-7 fl-capitalize m-0 open-sans">Track orders from suppliers to customers, providing real-time updates on shipping status.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="how-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Customer Notifications</h4>
+                                    <p class="how-desc fs-20 fw-medium grey-color-7 fl-capitalize m-0 open-sans"> Keep customers informed with automated notifications about their order status.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-0 ps-lg-5">
+                    <div class="position-relative">
+                        <img src="/assets/process-img.svg" alt="image" class="w-100">
+
+                        <div class="order-meg d-flex align-items-center radius-15 bg-white shadow-3 p-2 position-absolute gap-3">
+                            <div class="height-50">
+                                <img src="/assets/easy-square.svg" alt="logo" class="h-100">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h3 class="fs-16 fw-semibold fl-capitalize secondary-color m-0">your order has been recieved</h3>
+                                <p class="fs-14 fw-medium grey-color-11 mb-0">Order: #524457******224</p>
+                            </div>
+                            <i class="fa-solid fa-x fs-16 black-color position-absolute" role="button"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto align-items-center my-5 py-4 py-sm-5 gap-5 gap-lg-0">
+                <div class="col-lg-6 px-5 px-lg-2">
+                    <div class="position-relative">
+                        <img src="/assets/automation.svg" alt="image" class="how-img w-90">
+
+                        <div class="order-done d-flex flex-column align-items-center justify-content-center bg-white radius-25 shadow py-3 position-absolute">
+                            <img src="/assets/cart.svg" alt="image" class="height-80">
+                            <h3 class="fs-12 fw-medium tuna-color my-1">Your order is Confirmed!</h3>
+                            <button class="height-28 border-0 rounded-1 surf-bg fs-12 fw-medium text-uppercase px-3 text-white">done</button>
+                        </div>
+
+                        <div class="auto-alert d-flex align-items-center radius-15 bg-white shadow-3 p-2 position-absolute gap-2">
+                            <div class="height-50 width-50 d-flex align-items-center justify-content-center tequila-bg rounded-circle">
+                                <img src="/assets/!.svg" alt="icon" class="height-30">
+                            </div>
+                            <div class="d-flex align-items-start gap-2 pt-2">
+                                <h4 class="fs-18 fw-semibold text-capitalize black-color m-0">alert;</h4>
+                                <div class="d-flex flex-column gap-1">
+                                    <h5 class="fs-16 fw-medium black-color fl-capitalize m-0">about to be out of stock</h5>
+                                    <div class="d-flex flex-column">
+                                        <span class="w-100 d-inline-block height-4 rounded-pill grey-bg-2 mb-1"></span>
+                                        <span class="w-60 d-inline-block height-4 rounded-pill grey-bg-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-0 ps-lg-5">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="how-title fs-40 fw-medium text-capitalize black-color mb-4">automation</h3>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="how-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Order Processing</h4>
+                                    <p class="how-desc w-85 fs-20 fw-medium grey-color-7 fl-capitalize m-0 open-sans">Automate the order processing workflow to minimize manual intervention.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="how-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Inventory Alerts</h4>
+                                    <p class="how-desc fs-20 fw-medium grey-color-7 fl-capitalize m-0 open-sans">Set up alerts for low inventory levels to ensure continuous availability of popular products.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- how end -->
+
+    <!-- join start -->
+    <section class="join py-5 mb-5 d-flex align-items-center justify-content-center">
+        <div class="container px-lg-0 mx-auto overflow-hidden">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <h2 class="join-title fs-50 fw-normal text-capitalize text-center lh-sm">Join Thousands of <span class="fs-60 fw-semibold accent-color">Successful Businesses</span></h2>
+                <h3 class="join-desc fs-22 fw-normal grey-color-4 mb-sm-3 text-center lh-base open-sans">Start your e-commerce journey with EasyGCO and watch your business grow.</h3>
+                <div class="d-flex align-items-center justify-content-between gap-3 mb-5 mb-sm-0">
+                <button class="btn-2 height-50 text-capitalize fs-20 fw-normal  accent-bg-2 text-white px-30 rounded-pill border-2 border-solid border-accent transition-03">get started</button>
+                <button class="btn-1 height-50 text-capitalize fs-20 fw-normal bg-transparent secondary-color border-2 border-solid border-accent px-30 rounded-pill transition-03">contact us</button>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- join end -->
+    
+    <!-- footer start -->
+    <footer class="d-flex flex-column align-items-center justify-content-between">
+        <div class="container px-sm-0 mx-auto mt-5 mb-4 mb-sm-5">
+            <div class="row gx-lg-5 gx-0 gy-4 gy-lg-0 m-auto justify-content-between">
+                <div class="col-12 col-lg-4 ps-0">
+                    <div class="f-logo height-50 mb-2">
+                        <img src="/assets/logo.svg" alt="logo" class="h-100">
+                    </div>
+                    <h2 class="fs-20 fw-normal grey-color-3 lh-base open-sans">
+                        EasyGCO: Your all-in-one e-commerce solution, offering powerful tools to build, manage, and grow your online store with ease."
+                    </h2>
+                </div>
+                <div class="col-12 col-lg-7 pe-0">
+                    <div class="d-flex align-items-start justify-content-between">
+                        <!-- solution list -->
+                        <ul class="nav flex-column gap-1 gap-sm-2">
+                            <li class="nav-item">
+                                <h3 class="fs-26 fw-medium text-capitalize mb-2">solutions</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Digital products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Physical products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Customize your store</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Discount Coupon</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Payment Gateways</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Tax Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Automation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Drop shipping</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-20 fw-normal text-capitalize text-decoration-none black-color open-sans">Subscriptions</a>
+                            </li>
+                        </ul>
+                        <!-- about list -->
+                        <ul class="nav flex-column gap-1 gap-sm-2">
+                            <li class="nav-item">
+                                <h3 class="fs-26 fw-medium text-capitalize mb-sm-2">about</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">pricing</a>
+                            </li>
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">members</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">contact</a>
+                            </li>
+                        </ul>
+                        <!-- resources -->
+                        <ul class="nav flex-column gap-1 gap-sm-2">
+                            <li class="nav-item">
+                                <h3 class="fs-26 fw-medium text-capitalize mb-sm-2">resources</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Official Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">GitHub Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Help Center</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer foot -->
+        <div class="w-100 section-bg mt-5">
+            <div class="container py-4 px-sm-0 mx-auto">
+                <div class="w-100 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-lg-0 gap-3">
+                    <h5 class="fs-18 fw-medium m-0 inter">Copyright © 2024 EasyGCO.com </h5>
+                    <!-- policy list -->
+                    <ul class="nav gap-2 gap-sm-3 justify-content-center">
+                        <li class="nav-item">
+                            <a href="#" class="black-color fs-16 fw-medium text-decoration-none inter">Terms of Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="black-color fs-16 fw-medium text-decoration-none inter">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="black-color fs-16 fw-medium text-decoration-none inter">Security</a>
+                        </li>
+                    </ul>
+                    <!-- icons list -->
+                    <ul class="icons nav gap-2">
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <!-- <i class="fa-brands fa-square-instagram"></i> -->
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

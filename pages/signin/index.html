@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="icon" href="/assets/fav.png">
+    <!-- bootstrap framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- stylesheet links -->
+    <link rel="stylesheet" href="/style/custom.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <!-- boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="section-bg-3">
+
+    <!-- header start -->
+    <div class="pt-3 pt-sm-4">
+        <div class="container px-sm-0 d-flex align-items-center justify-content-center">
+            <div class="logo height-45">
+                <a href="#">
+                    <img src="/assets/logo.svg" alt="logo" class="h-100 w-100">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <section class="form sign-in">
+        <div class="container d-flex align-items-sm-center justify-content-center mx-auto py-4">
+            <div class="form-panel h-100 d-flex flex-column align-items-center px-3 px-sm-4 py-4 bg-white radius-15 shadow-2">
+                <h1 class="fs-32 fw-semibold text-capitalize mb-2 secondary-color text-center">sign in</h1>
+                <p class="form-desc w-85 fs-16 fw-normal grey-color-7 text-center mb-4">Get into your account with valid email and password</p>
+                <form action="" class="w-100">
+                    <div class="height-50 d-flex align-items-center gap-1 border-1 border-solid border-grey-6 rounded-3 px-3 grey-color-12 mb-20">
+                        <i class='bx bx-envelope fs-24'></i>
+                        <input type="email" name="email" id="email" placeholder="Enter email address" class="w-100 h-100 bg-transparent fs-18 fw-normal border-0" required>
+                    </div>
+                    <div class="height-50 d-flex align-items-center gap-1 border-1 border-solid border-grey-6 rounded-1 px-3 grey-color-12 position-relative">
+                        <i class='bx bx-lock-alt fs-24'></i>
+                        <input type="password" name="Password" id="Password" placeholder="Enter password" class="w-100 h-100 bg-transparent border-0 fs-18 fw-normal" required>
+                        <div class="pass-visibility grey-color-12 fs-18 position-absolute top-50 translate-middle-y lh-1" role="button">
+                            <i class='bx bx-show fs-22 show'></i>
+                            <i class='bx bx-hide fs-22 hide'></i>
+                        </div>
+                    </div>
+                    <div class="w-100 d-flex align-items-center justify-content-between mt-2">
+                        <div class="d-flex flex-row-reverse align-items-center gap-2">
+                            <label for="remember" class="fl-capitalize fs-14 fw-normal secondary-color m-0 lh-1">remember me</label>
+                            <input type="checkbox" id="remember" class="width-18 height-18 border-2 border-solid border-grey-7 position-relative rounded-3">
+                        </div>
+                        <a href="/forgetPassword.html" class="fl-capitalize fs-16 fw-medium accent-color text-decoration-none">forget password?</a>
+                    </div>
+                    <div class="w-100 d-flex align-items-center justify-content-between gap-2 gap-sm-3 py-4 border-bottom border-2 border-grey-6 position-relative">
+                        <button class="w-100 height-50 fs-16 fw-medium border-1 border-solid border-accent radius-8 text-white accent-bg text-capitalize transition-03 sacle-98">sign in</button>
+                        <span class="height-30 position-absolute -bottom-15 start-50 translate-middle-x px-2 bg-white lh-lg fs-16 fw-medium text-capitalize">or</span>
+                    </div>
+                </form>
+                <div class="w-100 d-flex flex-column align-items-center gap-3 mt-4">
+                    <button class="w-100 height-50 fs-16 fw-medium border-1 border-solid border-dark-2 radius-8 bg-transparent black-color fl-capitalize transition-03 sacle-98">register</button>
+                    <button class="w-100 d-flex align-items-center justify-content-between px-3 py-2 border-0 radius-8 section-bg-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="/assets/staff-avatar.svg" alt="image" class="height-45">
+                            <h3 class="fs-20 fw-semibold black-color m-0 text-capitalize">staff login</h3>
+                        </div>
+                        <i class='bx bx-right-arrow-alt fs-30 black-color'></i>
+                    </button>
+                </div>
+                <div class="d-flex align-items-center justify-content-center gap-4 mt-3 mb-0">
+                    <a href="#" class="fs-14 fw-medium black-color text-decoration-none">Terms of Service and Policies</a>
+                    <a href="#" class="fs-14 fw-medium black-color text-decoration-none d-none d-sm-block">Help Centre</a>
+                    <a href="#" class="fs-14 fw-medium black-color text-decoration-none d-block d-sm-none">Help!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

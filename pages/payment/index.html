@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accept Payment</title>
+    <link rel="icon" href="/assets/fav.png">
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- stylesheet links -->
+    <link rel="stylesheet" href="/style/custom.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <!-- chart.js library -->
+    <script src="httlps://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <!-- header start -->
+    <header class="position-fixed mx-auto top-0 start-0 end-0 z-100 transition-03 py-3">
+        <div class="container w-100 px-sm-0 d-flex align-items-center justify-content-between position-relative">
+            <div class="logo height-45">
+                <a href="#payment">
+                    <img src="/assets/logo.svg" alt="logo" class="h-100 w-100">
+                </a>
+            </div>
+            <div class="d-none d-lg-flex align-items-center justify-content-between gap-5">
+                <div class="d-flex align-items-center justify-content-between gap-4 gap-xl-5">
+                    <div class="dropdown d-flex align-items-center">
+                        <button class="link border-0 p-0 bg-transparent text-capitalize fs-18 fw-normal secondary-color transition-03" 
+                            type="button" id="stores_list" data-bs-toggle="dropdown" aria-expanded="false">
+                            solution
+                            <i class="fa-solid fa-chevron-down fs-16"></i>
+                        </button>
+                        <ul class="dropdown-menu p-0 rounded-3 overflow-hidden transition-03" aria-labelledby="solutions_menu">
+                            <li>
+                                <a href="#" class="dropdown-item height-45 d-flex align-items-center fs-18 text-capitalize transition-05 ps-2 py-0">option 1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item height-45 d-flex align-items-center fs-18 text-capitalize transition-05 ps-2 py-0">option 2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item height-45 d-flex align-items-center fs-18 text-capitalize transition-05 ps-2 py-0">option 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="../discover" class="link fs-18 fw-normal secondary-color text-capitalize text-decoration-none transition-03">pricing</a>
+                    <a href="../help" class="link fs-18 fw-normal secondary-color text-capitalize text-decoration-none transition-03">help center</a>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between gap-4">
+                    <button class="btn-1 height-45 px-30 border-2 border-solid border-accent rounded-pill bg-transparent secondary-color text-capitalize fs-20 fw-normal transition-03">sign in</button>
+                    <button class="btn-2 height-45 px-30 border-2 border-solid border-accent rounded-pill accent-bg-2 text-white text-capitalize fs-20 fw-normal transition-03">get started</button>
+                </div>
+            </div>
+            <div class="d-lg-none d-block">
+                <button class="header-icon width-40 height-40 d-flex d-lg-none align-items-center justify-content-center accent-bg rounded-circle text-white border-0" 
+                    role="button">
+                    <i class="fa-solid fa-bars bars fs-20"></i>
+                </button>
+            </div>
+        </div>
+        <div class="sidebar position-absolute top-0 bg-white p-3 transition-03">
+            <div class="d-flex align-items-start justify-content-between mb-3">
+                <div class="height-40">
+                    <a href="#payment">
+                        <img src="/assets/logo.svg" alt="logo" class="h-100">
+                    </a>
+                </div>
+                <button class="sidebar-icon width-35 height-35 d-flex d-lg-none align-items-center justify-content-center accent-bg rounded-circle text-white border-0" 
+                    role="button">
+                    <i class="fa-solid fa-x x fs-16"></i>
+                </button>
+            </div>
+            <ul class="nav d-flex flex-column mb-3 gap-1">
+                <li class="nav-item fs-18 text-capitalize transition-05">
+                    <button class="nav-link min-height-45 border-0 h-100 w-100 d-flex align-items-center justify-content-between fs-18 fw-normal text-capitalize secondary-color bg-transparent transition-05 ps-0 pe-2"
+                    role="button" data-bs-toggle="collapse" href="#solutionMenu" aria-expanded="false" aria-controls="solutionMenu">
+                        solution
+                        <i class="fa-solid fa-angle-down fs-18"></i>
+                    </button>
+                    <div class="collapse" id="solutionMenu">
+                        <ul class="nav d-flex flex-column gap-1">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link height-45 d-flex align-items-center fs-16 fw-normal text-capitalize transition-05 secondary-color ps-2">option 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link height-45 d-flex align-items-center fs-16 fw-normal text-capitalize transition-05 secondary-color ps-2">option 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link height-45 d-flex align-items-center fs-16 fw-normal text-capitalize transition-05 secondary-color ps-2">option 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item height-45 fs-18 fw-normal text-capitalize">
+                    <a href="#" class="nav-link w-100 h-100 d-flex align-items-center secondary-color p-0 transition-03">pricing</a>
+                </li>
+                <li class="nav-item height-45 fs-18 fw-normal text-capitalize">
+                    <a href="#" class="nav-link w-100 h-100 d-flex align-items-center secondary-color p-0 transition-05">help center</a>
+                </li>
+            </ul>
+            <div class="w-100 d-flex flex-column gap-2">
+                <button class="btn-1 height-45 px-4 border-2 border-solid border-accent rounded-pill bg-transparent secondary-color text-capitalize fs-18 fw-normal transition-03">sign in</button>
+                <button class="btn-2 height-45 px-4 border-2 border-solid border-accent rounded-pill accent-bg-2 text-white text-capitalize fs-18 fw-normal transition-03">get started</button>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <section class="payment pt-4" id="payment">
+        <div class="container px-sm-0 mx-auto pt-4 pt-sm-5 overflow-hidden">
+            <div class="d-flex flex-column align-items-center mt-5">
+                <h1 class="maintitle fs-70 fw-medium text-capitalize secondary-color text-center mt-4">Multiple Payment Gateways</h1>
+                <p class="desc fs-20 fw-normal grey-color-7 fl-capitalize text-center open-sans">Integrate with over 300 payment gateways to provide your customers with <br> their preferred payment methods.</p>
+            </div>
+            
+            <div class="row w-100 mx-auto py-5 mb-xl-4 align-items-center gap-5 gap-lg-0 flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 ps-0">
+                    <ul class="nav gap-3">
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Global Reach</h4>
+                                <p class="desc w-70 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Accept payments from customers worldwide with international payment gateways.</p>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Local Convenience</h4>
+                                <p class="desc w-70 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Offer popular local payment options to cater to your specific market.</p>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Flexible Integration</h4>
+                                <p class="desc w-70 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Easily integrate with your preferred payment gateways in just a few clicks.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 px-0">
+                    <img src="/assets/payment-map.svg" alt="image" class="w-100">
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto py-4 py-sm-5 mb-xl-2 align-items-center gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0">
+                    <img src="/assets/secure-img.svg" alt="image" class="w-100">
+                </div>
+                <div class="col-lg-6 px-0 ps-lg-4 ps-xl-5">
+                    <h3 class="pay-title fs-34 fw-medium text-capitalize secondary-color mb-3">Secure Transactions</h3>
+                    <ul class="nav gap-3">
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Security Priority</h4>
+                                <p class="desc w-80 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Security is our top priority. EasyGCO ensures that all transactions are processed securely to protect your business and your customers.</p>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">PCI Compliance</h4>
+                                <p class="desc w-80 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Our platform is fully PCI DSS compliant, ensuring the highest level of security.</p>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Fraud Detection</h4>
+                                <p class="desc w-80 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Advanced fraud detection tools to safeguard against suspicious activities.</p>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Encryption</h4>
+                                <p class="desc w-70 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">End-to-end encryption for all payment data to ensure secure transactions.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto mb-lg-5 py-4 py-sm-5 mt-4">
+                <div class="d-flex flex-column align-items-center mb-4">
+                    <h3 class="pay-title fs-40 fw-medium black-color text-capitalize text-center">multiple currencies</h3>
+                    <p class="desc fs-20 fw-normal black-color fl-capitalize text-center open-sans">Ensure quick and efficient payment processing to enhance <br> customer satisfaction.</p>
+                </div>
+                <div class="row w-100 h-100 mx-auto px-0 align-items-center gap-5 gap-lg-0 flex-column-reverse flex-lg-row">
+                    <div class="col-lg-6 px-0 pe-lg-5 pt-4 pt-lg-0">
+                        <ul class="currencies-txt nav w-80 gap-3 ms-auto">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Fast Transactions</h4>
+                                    <p class="desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Speedy processing to reduce waiting times for customers.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Real-Time Updates</h4>
+                                    <p class="desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Instant payment confirmation and real-time transaction updates.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Seamless Checkout</h4>
+                                    <p class="desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Smooth and intuitive checkout experience to minimize cart abandonment.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 px-0 ps-lg-0 ps-xxl-5 mb-5 mb-lg-0">
+                        <div class="currencies-box radius-20 section-bg p-3 position-relative mx-auto me-xl-auto ms-xl-0">
+                            <div class="d-flex align-items-start justify-content-between">
+                                <div class="w-75 d-flex flex-column mt-1">
+                                    <span class="d-inline-block w-100 height-8 rounded-pill edgeWater-bg mb-2"></span>
+                                    <span class="d-inline-block w-50 height-8 rounded-pill edgeWater-bg"></span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center width-30 height-30 rounded-circle edgeWater-bg">
+                                    <i class="fa-solid fa-check fs-20 secondary-color-3"></i>
+                                </div>
+                            </div>
+
+                            <ul class="currencies nav radius-15 p-3 bg-white position-absolute gap-1 shadow-1">
+                                <li class="nav-item w-100 d-flex align-items-center justify-content-between py-2 radius-15 bg-white px-2 shadow-b">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="currency-sign width-50 height-50 rounded-circle edgeWater-bg d-flex align-items-center justify-content-center fs-26 fw-semibold text-white">
+                                            &#x24;
+                                        </div>
+                                        <span class="fs-20 fw-normal grey-color-7 text-uppercase">usd</span>
+                                    </div>
+                                    <span class="currency-price fs-24 fw-normal">&2,500</span>
+                                </li>
+                                <li class="nav-item w-100 d-flex align-items-center justify-content-between py-2 radius-15  px-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="currency-sign width-50 height-50 rounded-circle edgeWater-bg d-flex align-items-center justify-content-center fs-26 fw-semibold text-white">
+                                            &#x20AC;
+                                        </div>
+                                        <span class="fs-20 fw-normal grey-color-7 text-uppercase">eur</span>
+                                    </div>
+                                    <span class="currency-price fs-24 fw-normal">€12,00</span>
+                                </li>
+                                <li class="nav-item w-100 d-flex align-items-center justify-content-between py-2 radius-15 px-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="currency-sign width-50 height-50 rounded-circle edgeWater-bg d-flex align-items-center justify-content-center fs-26 fw-semibold text-white">
+                                            &#xa5;
+                                        </div>
+                                        <span class="fs-20 fw-normal grey-color-7 text-uppercase">jpy</span>
+                                    </div>
+                                    <span class="currency-price fs-24 fw-normal">¥560</span>
+                                </li>
+                                <li class="nav-item w-100 d-flex align-items-center justify-content-between py-2 radius-15 px-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="currency-sign width-50 height-50 rounded-circle edgeWater-bg d-flex align-items-center justify-content-center fs-26 fw-semibold text-white">
+                                            &#xa3;
+                                        </div>
+                                        <span class="fs-20 fw-normal grey-color-7 text-uppercase">eur</span>
+                                    </div>
+                                    <span class="currency-price fs-24 fw-normal">£5,000</span>
+                                </li>
+                                <li class="nav-item w-100 d-flex align-items-center justify-content-center">
+                                    <img src="/assets/Polygon.svg" alt="icon" class="currency-arrow height-18">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            
+            <div class="row w-100 mx-auto py-4 py-sm-5 mb-xl-4 mt-5 align-items-center gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0 pe-lg-4">
+                    <img src="/assets/cryptocurrency.svg" alt="image" class="w-100">
+                </div>
+                <div class="col-lg-6 px-0 ps-lg-4 ps-xl-5">
+                    <h3 class="pay-title fs-32 fw-medium text-capitalize secondary-color mb-3">Accept Cryptocurrency Payments</h3>
+                    <ul class="nav gap-3">
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Global Reach</h4>
+                                <p class="desc w-80 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Cryptocurrencies are used worldwide, allowing you to expand your market and reach customers across the globe.</p>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Borderless Transactions</h4>
+                                <p class="desc w-80 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Accept payments from anywhere without the limitations of traditional banking.</p>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Attract New Customers</h4>
+                                <p class="desc w-90 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Tap into the growing community of cryptocurrency users.</p>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Instant Settlements </h4>
+                                <p class="desc w-80 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Receive payments quickly without the delays of international transfers.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto py-4 py-sm-5 mt-5 mb-xl-4 align-items-center gap-5 gap-lg-0 flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 col-xl-5 ps-0">
+                    <h3 class="pay-title fs-32 fw-medium text-capitalize secondary-color mb-1 mb-xl-2">Lower Transaction Fees</h3>
+                    <p class="desc w-90 fs-20 fw-normal open-sans grey-color-7 fl-capitalize mb-3 mb-xxl-4">Reduce costs with lower transaction fees compared to traditional payment methods.</p>
+                    <ul class="nav gap-3">
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Cost-Effective</h4>
+                                <p class="desc w-70 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Enjoy lower processing fees, saving you money on each transaction.</p>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">No Intermediaries</h4>
+                                <p class="desc w-75 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Direct peer-to-peer transactions eliminate the need for intermediaries.</p>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Transparent Fees</h4>
+                                <p class="desc w-80 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Know exactly what you're paying with clear, upfront fees.</p>
+                            </div>
+                        </li>
+                    </ul>   
+                </div>
+                <div class="col-lg-6 ps-lg-4 ps-xxl-5 px-0 position-relative">
+                    <img src="/assets/fees-bg.svg" alt="image" class="w-100">
+
+                    <div class="fees-box position-absolute p-3 bg-white radius-20 shadow">
+                        <h4 class="fs-16 fw-normal text-capitalize grey-color-7 mb-1">total profit</h4>
+                        <h5 class="fs-20 fw-semibold secondary-color mb-0">$2,700.00</h5>
+                        <div class="fees-chart">
+                            <canvas id="fees-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto py-4 py-sm-5 mt-5 mb-lg-5 align-items-center gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0 pe-lg-4 pe-xl-3">
+                    <img src="/assets/integration.svg" alt="image" class="w-100">
+                </div>
+                <div class="col-lg-6 px-0 ps-lg-4 ps-xl-5">
+                    <h3 class="pay-title fs-32 fw-medium text-capitalize secondary-color mb-1 mb-xl-2">Easy Integration</h3>
+                    <p class="fs-20 fw-normal open-sans grey-color-7 fl-capitalize mb-3 mb-xxl-4">Integrate payment processing seamlessly with your existing e-commerce setup.</p>
+                    <ul class="nav gap-3">
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Developer-Friendly</h4>
+                                <p class="desc w-75 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Comprehensive API documentation for easy integration.</p>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">Plug-and-Play</h4>
+                                <p class="desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Simple plugins for popular e-commerce platforms.</p>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex align-items-start gap-2">
+                            <div class="min-width-30 fs-22 lh-sm">
+                                <i class="fa-solid fa-check accent-color-3"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h4 class="pay-subtitle fs-24 fw-medium secondary-color text-capitalize mb-1">24/7 Support</h4>
+                                <p class="desc w-70 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Access to our support team for assistance with integration and troubleshooting.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer start -->
+    <footer class="d-flex flex-column align-items-center justify-content-between">
+        <div class="container px-sm-0 mx-auto mt-5 mb-4 mb-sm-5">
+            <div class="row gx-lg-5 gx-0 gy-4 gy-lg-0 m-auto justify-content-between">
+                <div class="col-12 col-lg-4 ps-0">
+                    <div class="f-logo height-50 mb-2">
+                        <img src="/assets/logo.svg" alt="logo" class="h-100">
+                    </div>
+                    <h2 class="fs-20 fw-normal grey-color-3 lh-base open-sans">
+                        EasyGCO: Your all-in-one e-commerce solution, offering powerful tools to build, manage, and grow your online store with ease."
+                    </h2>
+                </div>
+                <div class="col-12 col-lg-7 pe-0">
+                    <div class="d-flex align-items-start justify-content-between">
+                        <!-- solution list -->
+                        <ul class="nav flex-column gap-1 gap-sm-2">
+                            <li class="nav-item">
+                                <h3 class="fs-26 fw-medium text-capitalize mb-2">solutions</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Digital products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Physical products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Customize your store</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Discount Coupon</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Payment Gateways</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Tax Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Automation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Drop shipping</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-20 fw-normal text-capitalize text-decoration-none black-color open-sans">Subscriptions</a>
+                            </li>
+                        </ul>
+                        <!-- about list -->
+                        <ul class="nav flex-column gap-1 gap-sm-2">
+                            <li class="nav-item">
+                                <h3 class="fs-26 fw-medium text-capitalize mb-sm-2">about</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">pricing</a>
+                            </li>
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">members</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">contact</a>
+                            </li>
+                        </ul>
+                        <!-- resources -->
+                        <ul class="nav flex-column gap-1 gap-sm-2">
+                            <li class="nav-item">
+                                <h3 class="fs-26 fw-medium text-capitalize mb-sm-2">resources</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Official Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">GitHub Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Help Center</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer foot -->
+        <div class="w-100 section-bg mt-5">
+            <div class="container py-4 px-sm-0 mx-auto">
+                <div class="w-100 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-lg-0 gap-3">
+                    <h5 class="fs-18 fw-medium m-0 inter">Copyright © 2024 EasyGCO.com </h5>
+                    <!-- policy list -->
+                    <ul class="nav gap-2 gap-sm-2 gap-lg-3 justify-content-center">
+                        <li class="nav-item">
+                            <a href="#" class="black-color fs-16 fw-medium text-decoration-none inter">Terms of Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="black-color fs-16 fw-medium text-decoration-none inter">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="black-color fs-16 fw-medium text-decoration-none inter">Security</a>
+                        </li>
+                    </ul>
+                    <!-- icons list -->
+                    <ul class="icons nav gap-2">
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <!-- <i class="fa-brands fa-square-instagram"></i> -->
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

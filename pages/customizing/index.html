@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizing Your Store</title>
+    <link rel="icon" href="/assets/fav.png">
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- stylesheet links -->
+    <link rel="stylesheet" href="/style/custom.css">
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+<body>
+    
+    <!-- header start -->
+    <header class="position-fixed mx-auto top-0 start-0 end-0 z-100 transition-03 py-3">
+        <div class="container w-100 px-sm-0 d-flex align-items-center justify-content-between position-relative">
+            <div class="logo height-45">
+                <a href="#customizing">
+                    <img src="/assets/logo.svg" alt="logo" class="h-100 w-100">
+                </a>
+            </div>
+            <div class="d-none d-lg-flex align-items-center justify-content-between gap-5">
+                <div class="d-flex align-items-center justify-content-between gap-4 gap-xl-5">
+                    <div class="dropdown d-flex align-items-center">
+                        <button class="link border-0 p-0 bg-transparent text-capitalize fs-18 fw-normal secondary-color transition-03" 
+                            type="button" id="stores_list" data-bs-toggle="dropdown" aria-expanded="false">
+                            solution
+                            <i class="fa-solid fa-chevron-down fs-16"></i>
+                        </button>
+                        <ul class="dropdown-menu p-0 rounded-3 overflow-hidden transition-03" aria-labelledby="solutions_menu">
+                            <li>
+                                <a href="#" class="dropdown-item height-45 d-flex align-items-center fs-18 text-capitalize transition-05 ps-2 py-0">option 1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item height-45 d-flex align-items-center fs-18 text-capitalize transition-05 ps-2 py-0">option 2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item height-45 d-flex align-items-center fs-18 text-capitalize transition-05 ps-2 py-0">option 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="../discover" class="link fs-18 fw-normal secondary-color text-capitalize text-decoration-none transition-03">pricing</a>
+                    <a href="../help" class="link fs-18 fw-normal secondary-color text-capitalize text-decoration-none transition-03">help center</a>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between gap-4">
+                    <button class="btn-1 height-45 px-30 border-2 border-solid border-accent rounded-pill bg-transparent secondary-color text-capitalize fs-20 fw-normal transition-03">sign in</button>
+                    <button class="btn-2 height-45 px-30 border-2 border-solid border-accent rounded-pill accent-bg-2 text-white text-capitalize fs-20 fw-normal transition-03">get started</button>
+                </div>
+            </div>
+            <div class="d-lg-none d-block">
+                <button class="header-icon width-40 height-40 d-flex d-lg-none align-items-center justify-content-center accent-bg rounded-circle text-white border-0" 
+                    role="button">
+                    <i class="fa-solid fa-bars bars fs-20"></i>
+                </button>
+            </div>
+        </div>
+        <div class="sidebar position-absolute top-0 bg-white p-3 transition-03">
+            <div class="d-flex align-items-start justify-content-between mb-3">
+                <div class="height-40">
+                    <a href="#customizing">
+                        <img src="/assets/logo.svg" alt="logo" class="h-100">
+                    </a>
+                </div>
+                <button class="sidebar-icon width-35 height-35 d-flex d-lg-none align-items-center justify-content-center accent-bg rounded-circle text-white border-0" 
+                    role="button">
+                    <i class="fa-solid fa-x x fs-16"></i>
+                </button>
+            </div>
+            <ul class="nav d-flex flex-column mb-3 gap-1">
+                <li class="nav-item fs-18 text-capitalize transition-05">
+                    <button class="nav-link min-height-45 border-0 h-100 w-100 d-flex align-items-center justify-content-between fs-18 fw-normal text-capitalize secondary-color bg-transparent transition-05 ps-0 pe-2"
+                    role="button" data-bs-toggle="collapse" href="#solutionMenu" aria-expanded="false" aria-controls="solutionMenu">
+                        solution
+                        <i class="fa-solid fa-angle-down fs-18"></i>
+                    </button>
+                    <div class="collapse" id="solutionMenu">
+                        <ul class="nav d-flex flex-column gap-1">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link height-45 d-flex align-items-center fs-16 fw-normal text-capitalize transition-05 secondary-color ps-2">option 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link height-45 d-flex align-items-center fs-16 fw-normal text-capitalize transition-05 secondary-color ps-2">option 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link height-45 d-flex align-items-center fs-16 fw-normal text-capitalize transition-05 secondary-color ps-2">option 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item height-45 fs-18 fw-normal text-capitalize">
+                    <a href="#" class="nav-link w-100 h-100 d-flex align-items-center secondary-color p-0 transition-03">pricing</a>
+                </li>
+                <li class="nav-item height-45 fs-18 fw-normal text-capitalize">
+                    <a href="#" class="nav-link w-100 h-100 d-flex align-items-center secondary-color p-0 transition-05">help center</a>
+                </li>
+            </ul>
+            <div class="w-100 d-flex flex-column gap-2">
+                <button class="btn-1 height-45 px-4 border-2 border-solid border-accent rounded-pill bg-transparent secondary-color text-capitalize fs-18 fw-normal transition-03">sign in</button>
+                <button class="btn-2 height-45 px-4 border-2 border-solid border-accent rounded-pill accent-bg-2 text-white text-capitalize fs-18 fw-normal transition-03">get started</button>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- customizing start -->
+    <section class="customizing section-bg" id="customizing">
+        <div class="container min-h-screen-85 d-flex align-items-center justify-content-center py-5 px-sm-0">
+            <div class="d-flex flex-column align-items-center gap-3 mt-5">
+                <h1 class="customizing-maintitle fs-70 fw-medium secondary-color mb-0 text-center">Customizing Your Store <br> on EasyGCO</h1>
+                <p class="w-75 fs-20 fw-normal grey-color-7 open-sans text-center">Customizing your store on EasyGCO involves using various built-in tools and features to tailor your online shop to reflect your brand identity and meet your business needs. Here are some of the key customization options available</p>
+            </div>
+        </div>
+    </section>
+    <!-- customizing end -->
+
+    <!-- customizing start -->
+    <section>
+        <div class="container py-5 px-xl-4 mx-auto">
+            <div class="row w-100 mx-auto align-items-center px-xl-4 flex-column-reverse flex-lg-row py-4 py-sm-5 gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0 pe-xl-3 pe-xxl-4">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="customizing-title fs-40 fw-medium text-capitalize black-color mb-3">Themes and Layouts</h3>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="customizing-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Theme Selection</h4>
+                                    <p class="customizing-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Choose from a variety of pre-designed themes that can be customized to fit your brand’s aesthetics. Each theme is responsive, ensuring your store looks great on all devices.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="customizing-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Layout Customization</h4>
+                                    <p class="customizing-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Adjust the layout of your store by moving, adding, or removing elements to create a unique shopping experience. This includes headers, footers, product pages, and more.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-0 ps-lg-5">
+                    <img src="/assets/theme-img.svg" alt="image" class="customizing-img w-100">
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto align-items-center px-xl-4 mt-5 py-4 py-sm-5 gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0 pe-lg-5">
+                    <img src="/assets/product-display-img.svg" alt="image" class="customizing-img w-90">
+                </div>
+                <div class="col-lg-6 px-0 ps-xl-3 ps-xxl-4">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="customizing-title fs-40 fw-medium text-capitalize black-color mb-3">Product Display Options</h3>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="customizing-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Product Listings</h4>
+                                    <p class="customizing-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Customize how products are displayed, including image sizes, product descriptions, pricing, and more. Create custom collections and highlight featured products.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="customizing-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Product Pages</h4>
+                                    <p class="customizing-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Enhance product pages with detailed descriptions, multiple images, videos, and customer reviews to provide a comprehensive view of each product.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto align-items-center px-xl-4 flex-column-reverse flex-lg-row mt-5 mt-sm-0 py-4 py-sm-5 gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0 pe-xl-3 pe-xxl-3">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="customizing-title fs-40 fw-medium text-capitalize black-color mb-3">Branding Elements</h3>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="customizing-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Logo and Favicon</h4>
+                                    <p class="customizing-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Upload your logo and favicon to ensure consistent branding across your store.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="customizing-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Colors and Fonts</h4>
+                                    <p class="customizing-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Customize the color scheme and typography to match your brand’s style. This includes primary and secondary colors, as well as font choices for headings and body text.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-0 ps-lg-5">
+                    <img src="/assets/branding-elements.svg" alt="image" class="customizing-img w-100">
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto align-items-center px-xl-4 mt-5 py-4 py-sm-5 gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0 pe-lg-5">
+                    <img src="/assets/plugins-img.svg" alt="image" class="customizing-img w-100 ">
+                </div>
+                <div class="col-lg-6 px-0 ps-xl-3 ps-xxl-4">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="customizing-title fs-40 fw-medium text-capitalize black-color mb-3">Custom Widgets and Plugins</h3>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="customizing-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Widgets</h4>
+                                    <p class="customizing-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Add custom widgets to your store’s pages to enhance functionality. This can include social media feeds, customer testimonials, and newsletter sign-ups.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="customizing-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Plugins</h4>
+                                    <p class="customizing-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Integrate various plugins to add features such as live chat, advanced analytics, and marketing tools.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto align-items-center px-xl-4 mt-5 py-4 py-sm-5 gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0 pe-lg-5">
+                    <img src="/assets/empty-img.svg" alt="image" class="customizing-img w-100">
+                </div>
+                <div class="col-lg-6 px-0 ps-xl-3 ps-xxl-4">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="customizing-title w-60 fs-40 fw-medium text-capitalize black-color mb-3">Discount Coupons and Promotions</h3>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="customizing-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Create Coupons</h4>
+                                    <p class="customizing-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Generate discount coupons to offer promotions to your customers. Customize the coupon codes, set expiration dates, and define usage limits.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="customizing-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Promotional Banners</h4>
+                                    <p class="customizing-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Add promotional banners to your homepage or product pages to highlight special offers, new arrivals, or seasonal sales.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto align-items-center px-xl-4 flex-column-reverse flex-lg-row mt-5 py-4 py-sm-5 gap-5 gap-lg-0">
+                <div class="col-lg-6 px-0 pe-xl-3 pe-xxl-3">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="customizing-title fs-40 fw-medium text-capitalize black-color mb-3">Checkout Customization</h3>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="customizing-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Payment Gateways</h4>
+                                    <p class="customizing-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Integrate multiple payment gateways to provide various payment options for your customers. EasyGCO supports over 300 cryptocurrencies, as well as traditional payment methods.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="customizing-subtitle fs-22 fw-medium secondary-color text-capitalize mb-1">Checkout Process</h4>
+                                    <p class="customizing-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Customize the checkout process to ensure a smooth and user-friendly experience. This includes customizing checkout fields, adding trust badges, and offering guest checkout options.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-0 ps-lg-5">
+                    <img src="/assets/checkout-img.svg" alt="image" class="customizing-img w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- customizing end -->
+
+    <!-- row start -->
+    <section class="mb-5 pb-sm-5">
+        <div class="container px-sm-0 px-lg-5 py-sm-5 my-5">
+            <h2 class="fs-40 fw-medium secondary-color text-capitalize mb-4 mb-sm-5">benefits</h2>
+            <div class="row gx-4 gx-lg-5 px-0 pt-4 mx-auto w-100 gap-5 gap-lg-0">
+                <div class="col-lg-4">
+                    <div class="d-flex flex-column">
+                        <div class="width-80 height-80 d-flex align-items-center justify-content-center rounded-circle accent-bg-6 mb-4">
+                            <img src="/assets/UX.svg" alt="icon" class="height-40">
+                        </div>
+                        <div class="d-flex flex-column gap-2">
+                            <h3 class="fs-24 fw-semibold text-capitalize secondary-color mb-0">Enhanced User Experience</h3>
+                            <p class="fs-20 fw-normal open-sans grey-color-7 lh-base mb-0">Customized stores offer a more engaging and personalized shopping experience for customers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex flex-column">
+                        <div class="width-80 height-80 d-flex align-items-center justify-content-center rounded-circle accent-bg-6 mb-4">
+                            <img src="/assets/brand.svg" alt="icon" class="height-40">
+                        </div>
+                        <div class="d-flex flex-column gap-2">
+                            <h3 class="fs-24 fw-semibold text-capitalize secondary-color mb-0">Brand Consistency</h3>
+                            <p class="fs-20 fw-normal open-sans grey-color-7 lh-base mb-0">Consistent branding across your store helps in building brand recognition and trust.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex flex-column">
+                        <div class="width-80 height-80 d-flex align-items-center justify-content-center rounded-circle accent-bg-6 mb-4">
+                            <img src="/assets/sales.svg" alt="icon" class="height-40">
+                        </div>
+                        <div class="d-flex flex-column gap-2">
+                            <h3 class="fs-24 fw-semibold text-capitalize secondary-color mb-0">Increased Sales</h3>
+                            <p class="fs-20 fw-normal open-sans grey-color-7 lh-base mb-0">Custom promotions, discounts, and an optimized checkout process can lead to higher conversion rates and increased sales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- row end -->
+
+    <!-- footer start -->
+    <footer class="d-flex flex-column align-items-center justify-content-between">
+        <div class="container px-sm-0 mx-auto mt-5 mb-4 mb-sm-5">
+            <div class="row gx-lg-5 gx-0 gy-4 gy-lg-0 m-auto justify-content-between">
+                <div class="col-12 col-lg-4 ps-0">
+                    <div class="f-logo height-50 mb-2">
+                        <img src="/assets/logo.svg" alt="logo" class="h-100">
+                    </div>
+                    <h2 class="fs-20 fw-normal grey-color-3 lh-base open-sans">
+                        EasyGCO: Your all-in-one e-commerce solution, offering powerful tools to build, manage, and grow your online store with ease."
+                    </h2>
+                </div>
+                <div class="col-12 col-lg-7 pe-0">
+                    <div class="d-flex align-items-start justify-content-between">
+                        <!-- solution list -->
+                        <ul class="nav flex-column gap-1 gap-sm-2">
+                            <li class="nav-item">
+                                <h3 class="fs-26 fw-medium text-capitalize mb-2">solutions</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Digital products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Physical products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Customize your store</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Discount Coupon</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Payment Gateways</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Tax Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Automation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Drop shipping</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-20 fw-normal text-capitalize text-decoration-none black-color open-sans">Subscriptions</a>
+                            </li>
+                        </ul>
+                        <!-- about list -->
+                        <ul class="nav flex-column gap-1 gap-sm-2">
+                            <li class="nav-item">
+                                <h3 class="fs-26 fw-medium text-capitalize mb-sm-2">about</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">pricing</a>
+                            </li>
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">members</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">contact</a>
+                            </li>
+                        </ul>
+                        <!-- resources -->
+                        <ul class="nav flex-column gap-1 gap-sm-2">
+                            <li class="nav-item">
+                                <h3 class="fs-26 fw-medium text-capitalize mb-sm-2">resources</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Official Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">GitHub Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Help Center</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer foot -->
+        <div class="w-100 section-bg mt-5">
+            <div class="container py-4 px-sm-0 mx-auto">
+                <div class="w-100 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-lg-0 gap-3">
+                    <h5 class="fs-18 fw-medium m-0 inter">Copyright © 2024 EasyGCO.com </h5>
+                    <!-- policy list -->
+                    <ul class="nav gap-2 gap-sm-3 justify-content-center">
+                        <li class="nav-item">
+                            <a href="#" class="black-color fs-16 fw-medium text-decoration-none inter">Terms of Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="black-color fs-16 fw-medium text-decoration-none inter">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="black-color fs-16 fw-medium text-decoration-none inter">Security</a>
+                        </li>
+                    </ul>
+                    <!-- icons list -->
+                    <ul class="icons nav gap-2">
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <!-- <i class="fa-brands fa-square-instagram"></i> -->
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

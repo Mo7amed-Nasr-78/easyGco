@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription</title>
+    <link rel="icon" href="/assets/fav.png">
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- stylesheet links -->
+    <link rel="stylesheet" href="/style/custom.css">
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+<body>
+    
+    <!-- header start -->
+    <header class="position-fixed mx-auto top-0 start-0 end-0 z-100 transition-03 py-3">
+        <div class="container w-100 px-sm-0 d-flex align-items-center justify-content-between position-relative">
+            <div class="logo height-45">
+                <a href="#subscription">
+                    <img src="/assets/logo.svg" alt="logo" class="h-100 w-100">
+                </a>
+            </div>
+            <div class="d-none d-lg-flex align-items-center justify-content-between gap-5">
+                <div class="d-flex align-items-center justify-content-between gap-4 gap-xl-5">
+                    <div class="dropdown d-flex align-items-center">
+                        <button class="link border-0 p-0 bg-transparent text-capitalize fs-18 fw-normal secondary-color transition-03" 
+                            type="button" id="stores_list" data-bs-toggle="dropdown" aria-expanded="false">
+                            solution
+                            <i class="fa-solid fa-chevron-down fs-16"></i>
+                        </button>
+                        <ul class="dropdown-menu p-0 rounded-3 overflow-hidden transition-03" aria-labelledby="solutions_menu">
+                            <li>
+                                <a href="#" class="dropdown-item height-45 d-flex align-items-center fs-18 text-capitalize transition-05 ps-2 py-0">option 1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item height-45 d-flex align-items-center fs-18 text-capitalize transition-05 ps-2 py-0">option 2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item height-45 d-flex align-items-center fs-18 text-capitalize transition-05 ps-2 py-0">option 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="../discover" class="link fs-18 fw-normal secondary-color text-capitalize text-decoration-none transition-03">pricing</a>
+                    <a href="../help" class="link fs-18 fw-normal secondary-color text-capitalize text-decoration-none transition-03">help center</a>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between gap-4">
+                    <button class="btn-1 height-45 px-30 border-2 border-solid border-accent rounded-pill bg-transparent secondary-color text-capitalize fs-20 fw-normal transition-03">sign in</button>
+                    <button class="btn-2 height-45 px-30 border-2 border-solid border-accent rounded-pill accent-bg-2 text-white text-capitalize fs-20 fw-normal transition-03">get started</button>
+                </div>
+            </div>
+            <div class="d-lg-none d-block">
+                <button class="header-icon width-40 height-40 d-flex d-lg-none align-items-center justify-content-center accent-bg rounded-circle text-white border-0" 
+                    role="button">
+                    <i class="fa-solid fa-bars bars fs-20"></i>
+                </button>
+            </div>
+        </div>
+        <div class="sidebar position-absolute top-0 bg-white p-3 transition-03">
+            <div class="d-flex align-items-start justify-content-between mb-3">
+                <div class="height-40">
+                    <a href="#subscription">
+                        <img src="/assets/logo.svg" alt="logo" class="h-100">
+                    </a>
+                </div>
+                <button class="sidebar-icon width-35 height-35 d-flex d-lg-none align-items-center justify-content-center accent-bg rounded-circle text-white border-0" 
+                    role="button">
+                    <i class="fa-solid fa-x x fs-16"></i>
+                </button>
+            </div>
+            <ul class="nav d-flex flex-column mb-3 gap-1">
+                <li class="nav-item fs-18 text-capitalize transition-05">
+                    <button class="nav-link min-height-45 border-0 h-100 w-100 d-flex align-items-center justify-content-between fs-18 fw-normal text-capitalize secondary-color bg-transparent transition-05 ps-0 pe-2"
+                    role="button" data-bs-toggle="collapse" href="#solutionMenu" aria-expanded="false" aria-controls="solutionMenu">
+                        solution
+                        <i class="fa-solid fa-angle-down fs-18"></i>
+                    </button>
+                    <div class="collapse" id="solutionMenu">
+                        <ul class="nav d-flex flex-column gap-1">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link height-45 d-flex align-items-center fs-16 fw-normal text-capitalize transition-05 secondary-color ps-2">option 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link height-45 d-flex align-items-center fs-16 fw-normal text-capitalize transition-05 secondary-color ps-2">option 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link height-45 d-flex align-items-center fs-16 fw-normal text-capitalize transition-05 secondary-color ps-2">option 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item height-45 fs-18 fw-normal text-capitalize">
+                    <a href="#" class="nav-link w-100 h-100 d-flex align-items-center secondary-color p-0 transition-03">pricing</a>
+                </li>
+                <li class="nav-item height-45 fs-18 fw-normal text-capitalize">
+                    <a href="#" class="nav-link w-100 h-100 d-flex align-items-center secondary-color p-0 transition-05">help center</a>
+                </li>
+            </ul>
+            <div class="w-100 d-flex flex-column gap-2">
+                <button class="btn-1 height-45 px-4 border-2 border-solid border-accent rounded-pill bg-transparent secondary-color text-capitalize fs-18 fw-normal transition-03">sign in</button>
+                <button class="btn-2 height-45 px-4 border-2 border-solid border-accent rounded-pill accent-bg-2 text-white text-capitalize fs-18 fw-normal transition-03">get started</button>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+
+    <!-- subscription start -->
+    <section class="subscription" id="subscription">
+        <div class="container px-sm-0 py-5 mb-5">
+
+            <div class="d-flex flex-column align-items-center py-sm-4 px-0 mt-5 mb-sm-4">
+                <h1 class="sub-maintitle fs-70 fw-medium black-color text-center mt-4">Manage Subscriptions with EasyGCO </h1>
+                <h2 class="fs-26 fw-normal text-capitalize black-color text-center">Recurring Revenue Made Simple</h2>
+                <p class="sub-desc w-90 fs-18 fs-medium open-sans fl-capitalize grey-color-7 text-center mb-4">Grow your business and secure a steady stream of income by offering subscription services with EasyGCO. Our platform provides all the tools you need to set up, manage, and optimize subscriptions, making it easy to deliver continuous value to your customers.</p>
+                <div class="d-flex align-items-center gap-2 gap-sm-3">
+                    <button class="btn-2 height-50 fs-18 fw-medium px-30 text-white border-2 border-solid border-accent rounded-pill accent-bg transition-03 fl-capitalize">
+                        Get started for free
+                    </button>
+                    <button class="btn-1 height-50 fs-18 fw-medium px-30 secondary-color border-2 border-solid border-accent rounded-pill bg-transparent transition-03 fl-capitalize">
+                        view plans
+                    </button>
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto py-5 py-sm-5 my-5 justify-content-lg-between flex-column-reverse flex-lg-row gap-1 gap-sm-4 gap-lg-0">
+                <div class="col-lg-5 h-100 px-0 mt-5 mt-lg-0">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="sub-title fs-34 fw-medium text-capitalize black-color mb-1 mb-xl-2">Flexible Subscription Plans</h3>
+                        <p class="sub-desc fs-20 fw-normal open-sans black-color fl-capitalize mb-3 mb-xxl-4">Offer a Variety of Subscription Plans to Meet the Diverse Needs of Your Customers</p>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3 gap-lg-4">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="fs-22 fw-medium secondary-color text-capitalize mb-1">Customizable Plans</h4>
+                                    <p class="sub-desc w-85 fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Create plans with different pricing tiers, billing cycles, and benefits.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="fs-22 fw-medium secondary-color text-capitalize mb-1">Trial Periods</h4>
+                                    <p class="sub-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans pe-5">Offer free or discounted trial periods to attract new subscribers.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="fs-22 fw-medium secondary-color text-capitalize mb-1">Automatic Renewals</h4>
+                                    <p class="sub-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans pe-5">Ensure seamless service with automatic subscription renewals.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-xl-6 px-0">
+
+                    <div class="plan-cards w-100 position-relative">
+                    
+                        <div class="plan-card radius-20 bg-white px-3 py-4 shadow-1 position-absolute start-50">
+                            <div class="d-flex flex-column align-items-center border-bottom border-2 grey-border-6 mb-2">
+                                <div class="plan-icon width-40 height-40 d-flex align-items-center justify-content-center fs-18 text-white rounded-circle surf-bg mb-2 position-relative">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <h2 class="text-capitalize fs-20 fw-semibold black-color">professional</h2>
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                                <h3 class="fs-40 fw-medium surf-color mb-4">$50</h3>
+                                <p class="fs-14 fw-medium open-sans stormDust-color text-capitalize mb-3">unlimited website</p>
+                                <p class="fs-14 fw-medium open-sans stormDust-color text-capitalize mb-3">small business</p>
+                                <p class="fs-14 fw-medium open-sans stormDust-color text-capitalize mb-4">5 domains</p>
+                                <button class="border-0 px-3 height-40 surf-bg-2 rounded-pill fs-16 fw-medium text-capitalize black-color">choose plan</button>
+                            </div>
+                            <div class="professional-star height-50 position-absolute start-50">
+                                <img src="/assets/star-2.svg" alt="image" class="h-100">
+                            </div>
+                        </div>
+
+                        <div class="plan-card bg-white px-3 py-4 shadow-1 position-absolute border-1 border-solid border-grey-6">
+                            <div class="d-flex flex-column align-items-center border-bottom border-2 grey-border-6 mb-2">
+                                <div class="plan-icon width-40 height-40 d-flex align-items-center justify-content-center fs-16 text-white rounded-circle surf-bg mb-2 position-relative">
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <h2 class="text-capitalize fs-20 fw-semibold black-color">business</h2>
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                                <h3 class="fs-40 fw-medium surf-color mb-3">$74</h3>
+                                <p class="fs-14 fw-medium open-sans stormDust-color text-capitalize mb-3">unlimited website</p>
+                                <p class="fs-14 fw-medium open-sans stormDust-color text-capitalize mb-3">small business</p>
+                                <p class="fs-14 fw-medium open-sans stormDust-color text-capitalize mb-4">5 domains</p>
+                                <button class="border-0 px-3 height-40 surf-bg-2 rounded-pill fs-16 fw-medium text-capitalize">choose plan</button>
+                            </div>
+                            <div class="play-sharp height-30 position-absolute">
+                                <img src="/assets/play-sharp.svg" alt="image" class="h-100">
+                            </div>
+                        </div>
+
+                        <div class="plan-card bg-white px-3 py-4 shadow-1 position-absolute end-0 border-1 border-solid border-grey-6">
+                            <div class="d-flex flex-column align-items-center border-bottom border-2 grey-border-6 mb-2">
+                                <div class="plan-icon width-40 height-40 d-flex align-items-center justify-content-center fs-16 text-white rounded-circle surf-bg mb-2 position-relative">
+                                    <i class="fa-solid fa-tag"></i>
+                                </div>
+                                <h2 class="text-capitalize fs-20 fw-semibold black-color">standard</h2>
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                                <h3 class="fs-40 fw-medium surf-color mb-3">$89</h3>
+                                <p class="fs-14 fw-medium open-sans stormDust-color text-capitalize mb-3">unlimited website</p>
+                                <p class="fs-14 fw-medium open-sans stormDust-color text-capitalize mb-3">small business</p>
+                                <p class="fs-14 fw-medium open-sans stormDust-color text-capitalize mb-4">5 domains</p>
+                                <button class="border-0 px-3 height-40 surf-bg-2 rounded-pill fs-16 fw-medium text-capitalize">choose plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto py-lg-5 gap-5 gap-lg-0 mb-5 mb-lg-0">
+                <div class="col-lg-6 h-100 px-0 my-5 my-lg-0">
+
+                    <div class="subscribers-card radius-20 bg-white shadow-sm p-4 position-relative mx-sm-auto mx-lg-0">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div class="subscribers height-45 position-relative bg-danger">
+                                <img src="/assets/subscriber-1.svg" alt="image" class="position-absolute height-45 transition-03">
+                                <img src="/assets/subscriber-2.svg" alt="image" class="position-absolute height-45 transition-03">
+                                <img src="/assets/subscriber-3.svg" alt="image" class="position-absolute height-45 transition-03">
+                                <img src="/assets/edgeWater-plus.svg" alt="image" class="position-absolute height-30 top-50 translate-middle-y transition-03">
+                            </div>
+                            <a href="#" class="fs-20 fw-normal black-color text-capitalize text-decoration-none open-sans">
+                                details
+                                <i class="fa-solid fa-arrow-up-long greenSpring-color-2 rotate-45"></i>
+                            </a>
+                        </div>
+                        <h2 class="fs-16 fw-medium grey-color-9 text-capitalize mb-0 open-sans">active subscribers</h2>
+                        <p class="fs-28 fw-medium black-color mb-1">6,500</p>
+                        <div class="w-100 mb-2">
+                            <img src="/assets/subscribers-line.svg" alt="image" class="w-100">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h3 class="fs-18 fw-normal tuna-color mb-0 fl-capitalize">churn rate; <span class="fs-16 fw-semibold edgeWater-color">0.5%</span></h3>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="rate-line width-70 height-8 edgeWater-bg"></div>
+                                <div class="rate-line width-70 height-8 edgeWater-bg"></div>
+                            </div>
+                        </div>
+
+                        <div class="subscribers-credit d-flex align-items-center justify-content-between position-absolute bg-white radius-20 shadow-2 px-2 py-15 gap-3">
+                            <img src="/assets/master_logo.svg" alt="logo" class="height-30">
+                            <div class="d-flex align-items-center">
+                                <img src="/assets/asterisk-2.svg" alt="icon" class="height-12">
+                                <img src="/assets/asterisk-2.svg" alt="icon" class="height-12">
+                                <img src="/assets/asterisk-2.svg" alt="icon" class="height-12">
+                                <img src="/assets/asterisk-2.svg" alt="icon" class="height-12">
+                                <img src="/assets/asterisk-2.svg" alt="icon" class="height-12">
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center width-24 height-24 shadow-sm rounded-circle fs-14 edgeWater-color ms-2">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-0 ps-lg-5 ps-xl-0 pe-xl-5 mt-5 mt-lg-0">
+                    <div class="d-flex flex-column align-items-start">
+                        <h3 class="sub-title fs-34 fw-medium text-capitalize black-color mb-1 mb-xl-2">Seamless Management</h3>
+                        <p class="sub-desc fs-20 fw-normal open-sans black-color fl-capitalize mb-3 mb-xxl-4">Easily manage your subscriptions and keep track of subscriber activities.</p>
+                        <ul class="nav d-flex flex-column justify-content-around h-80 gap-3 gap-lg-4">
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="fs-22 fw-medium secondary-color text-capitalize mb-1">Subscriber Dashboard</h4>
+                                    <p class="sub-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">View and manage all your subscribers in one place.</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="fs-22 fw-medium secondary-color text-capitalize mb-1">Billing and Invoicing</h4>
+                                    <p class="sub-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Automate billing and invoicing processes for hassle-free management</p>
+                                </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-start gap-2">
+                                <div class="min-width-30 fs-22 lh-sm">
+                                    <i class="fa-solid fa-check accent-color-3"></i>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="fs-22 fw-medium secondary-color text-capitalize mb-1">Subscription Metrics</h4>
+                                    <p class="sub-desc fs-20 fw-normal grey-color-7 fl-capitalize m-0 open-sans">Monitor key metrics such as churn rate, lifetime value, and growth trends.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- subscription end -->
+
+    <!-- join start -->
+    <section class="join py-5 mb-5 d-flex align-items-center justify-content-center">
+        <div class="container px-lg-0 mx-auto overflow-hidden">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <h2 class="join-title fs-50 fw-normal text-capitalize text-center lh-sm">Join Thousands of <span class="fs-60 fw-semibold accent-color">Successful Businesses</span></h2>
+                <h3 class="join-desc fs-22 fw-normal grey-color-4 mb-sm-3 text-center lh-base open-sans">Start your e-commerce journey with EasyGCO and watch your business grow.</h3>
+                <div class="d-flex align-items-center justify-content-between gap-3 mb-5 mb-sm-0">
+                <button class="btn-2 height-50 text-capitalize fs-20 fw-normal  accent-bg-2 text-white px-30 rounded-pill border-2 border-solid border-accent transition-03">get started</button>
+                <button class="btn-1 height-50 text-capitalize fs-20 fw-normal bg-transparent secondary-color border-2 border-solid border-accent px-30 rounded-pill transition-03">contact us</button>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- join end -->
+    
+    <!-- footer start -->
+    <footer class="d-flex flex-column align-items-center justify-content-between">
+        <div class="container px-sm-0 mx-auto mt-5 mb-4 mb-sm-5">
+            <div class="row gx-lg-5 gx-0 gy-4 gy-lg-0 m-auto justify-content-between">
+                <div class="col-12 col-lg-4 ps-0">
+                    <div class="f-logo height-50 mb-2">
+                        <img src="/assets/logo.svg" alt="logo" class="h-100">
+                    </div>
+                    <h2 class="fs-20 fw-normal grey-color-3 lh-base open-sans">
+                        EasyGCO: Your all-in-one e-commerce solution, offering powerful tools to build, manage, and grow your online store with ease."
+                    </h2>
+                </div>
+                <div class="col-12 col-lg-7 pe-0">
+                    <div class="d-flex align-items-start justify-content-between">
+                        <!-- solution list -->
+                        <ul class="nav flex-column gap-1 gap-sm-2">
+                            <li class="nav-item">
+                                <h3 class="fs-26 fw-medium text-capitalize mb-2">solutions</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Digital products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Physical products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Customize your store</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Discount Coupon</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Payment Gateways</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Tax Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Automation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Drop shipping</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-20 fw-normal text-capitalize text-decoration-none black-color open-sans">Subscriptions</a>
+                            </li>
+                        </ul>
+                        <!-- about list -->
+                        <ul class="nav flex-column gap-1 gap-sm-2">
+                            <li class="nav-item">
+                                <h3 class="fs-26 fw-medium text-capitalize mb-sm-2">about</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">pricing</a>
+                            </li>
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">members</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">contact</a>
+                            </li>
+                        </ul>
+                        <!-- resources -->
+                        <ul class="nav flex-column gap-1 gap-sm-2">
+                            <li class="nav-item">
+                                <h3 class="fs-26 fw-medium text-capitalize mb-sm-2">resources</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Official Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">GitHub Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 fs-18 fw-normal text-capitalize text-decoration-none black-color open-sans">Help Center</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer foot -->
+        <div class="w-100 section-bg mt-5">
+            <div class="container py-4 px-sm-0 mx-auto">
+                <div class="w-100 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-lg-0 gap-3">
+                    <h5 class="fs-18 fw-medium m-0 inter">Copyright © 2024 EasyGCO.com </h5>
+                    <!-- policy list -->
+                    <ul class="nav gap-2 gap-sm-3 justify-content-center">
+                        <li class="nav-item">
+                            <a href="#" class="black-color fs-16 fw-medium text-decoration-none inter">Terms of Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="black-color fs-16 fw-medium text-decoration-none inter">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="black-color fs-16 fw-medium text-decoration-none inter">Security</a>
+                        </li>
+                    </ul>
+                    <!-- icons list -->
+                    <ul class="icons nav gap-2">
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <!-- <i class="fa-brands fa-square-instagram"></i> -->
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item" role="button">
+                            <div class="icon width-50 height-50 fs-28 black-color rounded-circle d-flex align-items-center justify-content-center bg-transparent border border-2 border-dark transition-05">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

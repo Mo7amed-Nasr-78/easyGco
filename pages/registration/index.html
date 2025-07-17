@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="icon" href="/assets/fav.png">
+    <!-- bootstrap framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- stylesheet links -->
+    <link rel="stylesheet" href="/style/custom.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <!-- boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="section-bg-3">
+
+    <!-- header start -->
+    <div class="pt-3 pt-sm-4">
+        <div class="container px-sm-0 d-flex align-items-center justify-content-center">
+            <div class="logo height-45">
+                <a href="#">
+                    <img src="/assets/logo.svg" alt="logo" class="h-100 w-100">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <section class="form">
+        <div class="container d-flex align-items-start align-items-sm-center justify-content-center mx-auto py-4">
+            <div class="form-panel d-flex flex-column align-items-center px-3 px-sm-4 py-4 bg-white radius-15 shadow-2">
+                <h1 class="form-title fs-32 fw-semibold text-capitalize mb-2 secondary-color text-center">Account Registration</h1>
+                <p class="fs-16 fw-normal grey-color-7 text-center mb-4">Easy steps to get started</p>
+                <form action="" class="w-100">
+                    <div class="height-50 d-flex align-items-center gap-1 border-1 border-solid border-grey-6 rounded-1 px-3 grey-color-12">
+                        <i class='bx bx-envelope fs-22'></i>
+                        <input type="email" name="email" id="email" placeholder="Enter email address" class="w-100 h-100 bg-transparent fs-18 fw-normal border-0" required>
+                    </div>
+                    <div class="w-100 d-flex flex-column align-items-center justify-content-between gap-3 py-4 border-bottom border-2 border-grey-5 position-relative">
+                        <button class="w-100 height-50 fs-16 fw-medium border-1 border-solid border-accent radius-8 text-white accent-bg text-capitalize transition-03 sacle-98">authorize email</button>
+                        <div class="w-100 d-none d-sm-flex align-items-center gap-20">
+                            <button class="w-50 height-50 fs-16 fw-medium black-color text-capitalize border-1 border-solid border-dark-2 p-0 radius-8 bg-transparent transition-03 sacle-98">
+                                help center                         
+                            </button>
+                            <button class="w-50 height-50 fs-16 fw-medium black-color text-capitalize border-1 border-solid border-dark-2 p-0 radius-8 bg-transparent transition-03 sacle-98">
+                                sign in                         
+                            </button>
+                        </div>
+                        <span class="height-30 position-absolute -bottom-15 start-50 translate-middle-x px-2 bg-white lh-lg fs-16 fw-semibold text-capitalize">or</span>
+                    </div>
+                </form>
+                <div class="w-100 d-flex d-sm-none align-items-center gap-20 mt-4">
+                    <button class="w-50 height-50 fs-16 fw-medium black-color text-capitalize border-1 border-solid border-dark-2 p-0 radius-8 bg-transparent transition-03 sacle-98">
+                        help center                         
+                    </button>
+                    <button class="w-50 height-50 fs-16 fw-medium black-color text-capitalize border-1 border-solid border-dark-2 p-0 radius-8 bg-transparent transition-03 sacle-98">
+                        sign in                         
+                    </button>
+                </div>
+                <a href="#" class="fs-14 fw-medium black-color text-decoration-none text-center mt-4">Terms of Service and Policies</a>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
